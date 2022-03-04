@@ -1,0 +1,88 @@
+<!DOCTYPE html> <!--le indica al explorador web que el codigo es html -->
+<html>
+<head>
+    <title>mi primera web</title> <!--es lo que pone arriba del todo en la pestaña del explorador-->
+    
+</head>
+<body>
+    <table  rules=all style="width: 400px; border: 1px solid black;"> <!--rule=all sirve para poner una tabla normal-->
+        <thead>
+        <tr>
+            <th>Producto</th> <!--se queda siempre centrado-->
+            <th>precio</th>
+        </tr>
+        </thead>
+        <tbody>
+            <tr> <!--filas-->
+                <td>hola beats</td> <!--celdas-->
+                <td>gratis</td>
+            </tr>
+            <tr> <!--filas-->
+                <td>raton</td> <!--celdas-->
+                <td>12.23</td>
+            </tr>
+        </tbody>
+        <tfoot>
+            <td></td>
+            <td>12.23</td>
+        </tfoot>  
+        
+    </table>
+    <!--ul es lista no ordenada-->
+    <ul>
+        <li>elemento1</li>
+        <li>elemento2</li>
+        <li>elemento3</li>
+        <li>elemento4
+            <ol>
+                <li style="list-style-type:lower-latin;">anidada1</li>
+                <li style="list-style-type:lower-latin;">anidada2</li>
+                <li style="list-style-type:lower-latin;">anidada3</li>
+            </ol>
+        </li>
+    </ul>
+    <!--ol es lista ordenada-->
+    <ol>
+        <li value="50">elemento1</li>
+        <li>elemento2</li>
+        <li>elemento3</li>
+    </ol>
+  <h1>mi primer heading</h1>
+  <hr> <!--para hacer una linea y haya un salto-->
+  <h2>mi segundo heading</h2> <!-- la etiqueta de h7 no existe-->
+  <p>erase una vez un cuento</p>
+  <p>que nunca se acaba</p>
+  <p>este texto es <span style="color:blue">mas largo y sirve</span> <br>para mostrar la etiqueta span</p> 
+  <!--la etique span sirve para marcar el texto de forma silencionsa por eso le hemos
+el color para verificar que funciona, la etiqueta br sirve para hacer cambio de linea-->
+<a target="_blank" href="https://www.google.com">ir a google</a> <!--para insertar hipervinculos, el atriburto
+target nos hace que se nos abra en una nueva pestaña-->
+<img src="img/R.png" width="400" /> <!--img es la etiqueta para poner imagen, width mantiene las
+propiedades de la imagen, si unamos heigt nos cambia el alto-->
+<form target="_blank" action="/formulario" method="post"> <!--para hacer formularios, el atributo action es para mandarlo donde queremos guardarlo
+podemos poner get que nos sale todos los campos en la url o post que solo nos sale el nombre, ambos no son seguros ya que se pueden ver
+los datos, hay una forma de encriptar datos que en este video no sale-->
+    <label for="nombre">Nombre</label> <!--el for en label y el id en input nos permite que al pulsar
+    en la etiqueta es decir en nombre automaticamente se me ponga el cursor donde tengo que escribir-->
+    <input values="consuelo" type="email" id="nombre" name="nombre" placeholder="Nombre"/> <!--el atributo name es como va a reconoocer el servidor los datos
+    donde mandemos el formulario, el placeholder es el tipo de dato que tenemos que poner lo que se pone en
+    gris clarito que luego no sirve para nada, type es la propiedad que quiero que tenga el formulario,
+    lo mas utilizados es email, file, radio, submit (Boton), values es un valor por defecto-->
+    <br>
+    <br>
+    <label>Apellidos</label>
+    <input />
+    <br>
+    <label for="comentario">comentario</label>
+    <textarea cols="50" rows="10" id="comertario" placeholder="ingreso comentrio" name="comentario">este es un valor por defecto</textarea>
+     <!--tiene propiedades similares a input, no tienen valores por defecto-->
+     <input type="submit"/> <!--este es el boton para enviar-->
+     <button type="button"><img src="img/R.png" width="100"/> boton</button> <!--la etiqueta button es mas personalizada que la input=submit-->
+     <button type="submit">tipo boton</button>
+     <button type="reset">tipo boton</button>
+
+
+
+</form>
+</body>
+</html>
