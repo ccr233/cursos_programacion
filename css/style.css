@@ -1,0 +1,163 @@
+#titulo {
+    color:blue;
+} /*en lugar de poner los identificadores puedes poner la etiqueta directamente por ejemplo h1, si es una
+clase en lugar de un id tienes que poner .*/
+
+p.texto {
+    color:blue;
+}
+p.especial {
+    color:green;
+} /*lo ultimo tiene prioridad*/
+/*todas las etiquetas de div se le asigne un estilo diferente */
+
+div p {
+    color:aqua;
+}
+/*si quiero que un stilo este en varios elementos pongo la coma entre los dos por ejemplo div p, div h1*/
+div h1 {
+    color:brown;
+}
+/*el * es para seleccionar todo, va a poner las propiedades si previamente no han sido definidas por otros selectores*/
+*{
+    font-size: 24px;
+}
+/*podemos definir el color de forma exagesimal
+.color {
+    color: #00f;
+}
+/*podemos definir el color de forma rgb
+.color {
+    color: rgb(0, 0, 255);
+}*/
+
+.color {
+    border: 5px black solid;
+    /*border-style: solid;
+    border-color: black
+    border-radius: 5px, para hacer los bordes redondeados
+    border-with: 5px, para el grosor del borde, css tienen diferentes medidas cm, mm, in, px, etc es mejor
+    tomar medidas relativas, las que se usan son las em que es relativa al tamaño de la fuente y rem que es
+    relativa al tamaño de la fuente general que por defecto es 16px */
+}
+
+#fondo {
+    background-color: rgba(0,0,0, 0.5); /*para pasar transparencia, 1 no se ve nada y 0 se ve completamente*/
+    /*opacity: 0.3;*/
+   
+    background-image: url('OIP\ \(1\).jfif');
+    background-size: 400px, 400px;
+    background-repeat: no-repeat;
+    background-position: center, top;
+    /*todo esto puede estar en un mismo background
+    background: url(), no repeat, center, top /100px, 100px */
+}
+
+.margen {
+    height: 100px;
+    width: 50px;
+    font-size: 25px;
+    background-color: brown;
+    margin: 30px; /*el primero es el margen de arriba, el segundo el de la derecha, el tercero el
+    margen de abajo y el ultimo el margen de la izquierda*/
+    padding: 30px 20px 25px 15px; /*padding deja margenes en el elemento y margin deja los margenes*/
+    border: solid 1px black;
+    overflow: scroll;
+    /*muchas veces el alto y el ancho del cuadrado no cabe las palabas exactamente por lo que hacemos un overflow*/
+    outline: 1px solid red; /*es para poner una linea por fuera del padding*/
+    
+}
+
+.text {
+    font-family: 'Hubballi', cursive;
+    text-align: center;
+    text-decoration: underline;
+    text-shadow: 3px 5px 5px blue ;
+   
+}
+
+/*para ver el estado del link, el orden de colocar esto es muy importante porque sabemos que tiene preferencia el
+ultimo el orden es el que tenemos aqui*/
+a:link{
+    color:blueviolet;
+}
+a:visited {
+    color:grey;
+}
+a:hover {
+    color:red; /*cuando paso el mouse por encima*/
+}
+a:active {
+    color: yellow; /*cuando pincho en el link*/
+}
+
+/*las listas tienen un pading por defecto de 40*/
+ul {
+    background-color: aqua;
+    list-style-type: none;
+    padding-left: 0;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse; /*para que solo salga una linea*/
+
+}
+
+th, td {
+    border:solid 1px black;
+    padding:5px;
+}
+
+th{
+    background-color: red;
+    color: white;
+    text-align: left;  
+}
+/*seleccionar unos elementos en particular para ver una linea en cada color por ejemplo*/
+td:nth-child(even){
+    background-color: antiquewhite;
+}
+td:hover {
+    background-color: aquamarine;
+    cursor: pointer; /*para que se convierta en mano cuando pase por la celda*/
+}
+ /*vemos el modo display, el display block es el que viene en la mayoria de los elementos que hace que salte la linea*/
+
+span {
+    display:block;
+    /* display: none; forma de ocultar elementos*/
+    /* visibility: hidden; forma de ocular elementos*/
+    max-width: 300px; /*esto sirve para que se achique es decir cambia de longitud segun la pantalla*/
+
+
+}
+/*podemos hacer un display en los div para que se generen como los span*/
+.inline {
+    display:inline;
+}
+#position {
+    /* position:fixed; se queda fijo */
+    /* position:absolute */
+    /* position:sticky mezcla entre relative y fixed */
+    left: 20px;
+}
+
+/*float sirve para alinear uno detras del otro si a todos le damos la misma propiedae*/
+.left {
+    float: left;
+    width: 100px;
+    height: 200px ;
+}
+.right {
+    float:right
+}
+/* .card{
+    border:solid 1px #ddd;
+    border-radius: 5px;
+    margin: 0 15px;
+    padding: 10px 15px;
+    width: 33%; 
+    forma en la que antiguamente se formaban 3 columnas
+}*/
+
